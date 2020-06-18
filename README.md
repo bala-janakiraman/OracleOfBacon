@@ -9,5 +9,17 @@ With a larger dataset, this could be used to determine "6  Degrees of Separation
 A small truncated and cleanedup dataset from "oracleofBacon" site
 https://oracleofbacon.org/data.txt.bz2
 
+### Playing
+Clone the repo  
+Open Terminal and CD to repo folder  
+Run the following command  
+`FLASK_APP=app.py FLASK_ENV=developement flask run`   
+Go to `http://localhost:5000/` in the browser
+
+Chose any 2 actor to see how they are connected. 
+
+#### Frameworks
+Python Flask, HTML and Jinja. 
+
 ##### Mentions 
 The Coding Train and Daniel Shiffman

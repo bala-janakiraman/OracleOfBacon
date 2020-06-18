@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="static/bootstrap.min.css">
+    <title>Simple Tiny Url</title>
+</head>
+<body>
+<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+  <h5 class="my-0 mr-md-auto font-weight-normal">6 Degrees of Kevin Bacon</h5>
+  <a class="btn btn-outline-primary" href="{{ url_for('home') }}">New Bacon Path</a>
+</div>
+
+<div class="container">
+  <div class="card-deck mb-3">
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal text-center">Baconator</h4>
+      </div>
+      <div class="card-body">
+        <form action="bacon_path" method="post">
+          <label for="fromActor">Actor One</label>
+          <input type="text" class="form-control" name="fromActor" id="fromActor" value="Kevin Bacon" required>
+          <br>
+          <label for="toActor">Actor Two</label>
+          <input type="text" class="form-control" name="toActor" id="toActor" value="" required>
+          <br>
+          <button class="btn btn-primary btn-lg btn-block" type="submit">Get Bacon Path</button>
+        </form>
+      </div>
+      <div class="card-body">
+        {{data}}
+      </div>
+
+    </div>
+  </div>
+</div>
+
+{% for category,message in get_flashed_messages(with_categories=true) %}
+<div class="container text-center">
+<!--  <div class="p-3 mb-2 bg-danger text-white">{{ message }}</div>-->
+  {% if category == "404" %}
+    <div class="p-3 mb-2 bg-danger text-white">{{ message }}<br></div>
+  {% else %}
+  <div class="p-3 mb-2 bg-success text-white">{{ message }}</div>
+  {% endif %}
+</div>
+<br>
+{% endfor %}
+<!--#35dc68-->
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="static/jquery-3.3.1.slim.min.js"></script>
+<script src="static/popper.min.js"></script>
+<script src="static/bootstrap.min.js"></script>
+</body>
+</html>
