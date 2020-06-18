@@ -1,13 +1,15 @@
 ## "6 Degrees of Kevin Bacon" or "Oracle of Bacon" 
 
-Just for Kicks coding lab implementing graph datastructures and Breadth first search.
+Just for Kicks coding lab implementing graph datastructures and Breadth first search.  
 https://en.wikipedia.org/wiki/Breadth-first_search
 
 With a larger dataset, this could be used to determine "6  Degrees of Separation" or determining who is the center of hollywood. 
 
+---------
 ### Datasets
 A small truncated and cleanedup dataset from "oracleofBacon" site
 https://oracleofbacon.org/data.txt.bz2
+
 
 ### Playing
 Clone the repo  
@@ -16,7 +18,9 @@ Run the following command
 `FLASK_APP=app.py FLASK_ENV=developement flask run`   
 Go to `http://localhost:5000/` in the browser
 
-Chose any 2 actor to see how they are connected. 
+Key in any 2 actor to see how they are connected. 
+
+---------
 
 #### Frameworks
 Python Flask, HTML and Jinja. 
